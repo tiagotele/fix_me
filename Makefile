@@ -8,4 +8,4 @@ uvicorn_run:
 	uvicorn app.api:app --reload
 
 unit_tests:
-	python3 -m pytests
+	python3 -m pytest
