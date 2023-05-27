@@ -2,7 +2,7 @@ docker_build:
 	docker build -t tiagotele/python_api .
 
 docker_run:
-	docker run -p 80:80 tiagotele/python_api
+	docker run -p 80:80 -v $(pwd):/code tiagotele/python_api
 
 uvicorn_run:
 	uvicorn app.api:app --reload

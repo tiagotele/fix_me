@@ -10,5 +10,5 @@ def test_read_endpoint():
 
 def test_about_endpoint():
     response = client.get("/about")
-    assert response.status_code == 500
+    assert response.status_code == 200
     assert response.json() == {"About": "Vai dar bom"}
