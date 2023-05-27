@@ -7,11 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Wrong exit
-        run: exit 1
+      #- name: Wrong exit
+      #  run: exit 1
 
       - name: Install libs
-        run: pip install -r requiremens.txt
+        run: pip install -r requirements.txt
 
       - name: Unit Test
         run: |
