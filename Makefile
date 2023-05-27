@@ -9,3 +9,7 @@ uvicorn_run:
 
 unit_tests:
 	python3 -m pytest
+
+unit_tests2:
+	python3 -m pytest
+
