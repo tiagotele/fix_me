@@ -7,5 +7,5 @@ docker_run:
 uvicorn_run:
 	uvicorn app.api:app --reload
 
-unit_tests:
+unit_test:
 	python3 -m pytest
