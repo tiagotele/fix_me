@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
 
-COPY ./pasta_que_nao_existe /code/app
+COPY . /code/app
 
 CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "80"]
