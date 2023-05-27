@@ -7,15 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Wrong exit
-        run: exit 1
-
-      - name: Install libs
-        run: pip install -r requiremens.txt
+        - name: Install libs
+        run: pip install -r requirements.txt
 
       - name: Unit Test
-        run: |
-          make unit_tests
+        run: make unit_tests
     
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag tiagotele/python_api:$(date +%y-%m-%d_%H-%M)
