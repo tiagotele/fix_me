@@ -11,7 +11,7 @@ jobs:
         run: exit 1
 
       - name: Install libs
-        run: pip install -r requiremens.txt
+        run: pip install -r requirements.txt
 
       - name: Unit Test
         run: |
