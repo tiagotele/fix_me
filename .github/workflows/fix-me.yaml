@@ -15,13 +15,13 @@ jobs:
           make unit_tests
     
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag davinascimentodasilva10/fix_me:$(date +%y-%m-%d_%H-%M)
+        run: docker build . --file Dockerfile --tag tiagotele/fix_me:$(date +%y-%m-%d_%H-%M)
     
       - name: List Docker images
         run: docker images
     
       - name: Run app with Docker
-        run: docker run -d -p 80:80 davinascimentodasilva10/fix_me
+        run: docker run -d -p 80:80 tiagotele/fix_me
     
       - name: Install Go
         uses: actions/setup-go@v3
