@@ -10,7 +10,7 @@ jobs:
       - name: Install libs
         run: pip install -r requirements.txt
       - name: Unit Test
-        run: |
+        run:
           make unit_tests
     
       - name: Build the Docker image
