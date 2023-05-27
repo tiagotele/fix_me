@@ -1,8 +1,8 @@
 docker_build:
-	docker build -t tiagotele/python_api .
+	docker build -t davimetalx/fix_me
 
 docker_run:
-	docker run -p 80:80 tiagotele/python_api
+	docker run -p 80:80 davimetalx/fix_me
 
 uvicorn_run:
 	uvicorn app.api:app --reload
