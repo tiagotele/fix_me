@@ -12,7 +12,7 @@ jobs:
 
       - name: Unit Test
         run: |
-        make unit_tests
+          make unit_tests
     
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag tiagotele/python_api:$(date +%y-%m-%d_%H-%M)
@@ -21,8 +21,7 @@ jobs:
         run: docker images
     
       - name: Run app with Docker
-        run: 
-        
+        run: docker run -d -p 80:80 tiagotele/python_api
     
       - name: Install Go
         uses: actions/setup-go@v3
