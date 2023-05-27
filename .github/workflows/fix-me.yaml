@@ -6,9 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
-      - name: Wrong exit
-        run: exit 1
 
       - name: Install libs
         run: pip install -r requiremens.txt
@@ -18,13 +15,13 @@ jobs:
           make unit_tests
     
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag tiagotele/python_api:$(date +%y-%m-%d_%H-%M)
+        run: docker build . --file Dockerfile --tag davimetalx/fix_me:$(date +%y-%m-%d_%H-%M)
     
       - name: List Docker images
         run: docker images
     
       - name: Run app with Docker
-        run: docker run -d -p 80:80 tiagotele/python_api
+        run: docker run -d -p 80:80 davimetalx/fix_me
     
       - name: Install Go
         uses: actions/setup-go@v3
