@@ -9,7 +9,7 @@ export let options = {
 export default function () {
   let response = http.get(`${__ENV.MY_HOSTNAME}`);
   check(response, {
-    "Status 200 (OK)": (res) => res.status === 201,
+    "Status 200 (OK)": (res) => res.status === 200,
   });
 
 }
